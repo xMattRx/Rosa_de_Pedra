@@ -104,12 +104,21 @@ margin-left: 17px;
 /* section quem somos */
 .section-quem-somos{
   background: rgb(229,229,229);
-  background: linear-gradient(166deg, rgba(229,229,229,1) 80%, rgba(254,220,224,1) 80%);
   padding-top: 133px;
-  padding-left: 75px;
+  padding-right: 82px;
+  position: relative;
+}
+/* triangulo */
+.section-quem-somos::after{
+  border-style: solid;
+  border-width: 200px 100vw 100px 0;
+  border-color: transparent var(--background1) transparent transparent;
+  content:"";
+  height: 0;
+  width: 0;
 }
 .section-quem-somos h1{
-  padding-left: 11px;
+  padding-left: 86px;
   font-size:32px;
   color: var(--text1);
   cursor: default;
@@ -123,7 +132,7 @@ margin-left: 17px;
   position: absolute;
   color: var(--background-title);
   z-index: 1;
-  left: 34px;
+  left: 109px;
   bottom: -21px;
 }
 .section-quem-somos h1::before{
@@ -131,7 +140,7 @@ margin-left: 17px;
   z-index: 1;
   height: 6px;
   width: 6px;
-  left: 1px;
+  left: 76px;
   top: 22px;
   background-color: var(--color-button);  
   position: absolute;
@@ -140,13 +149,13 @@ margin-left: 17px;
   margin-top: 67px;
   height: 420px;
   width: 677px;
+  padding-left:75px;
 }
 .section-quem-somos p{
   font-size: 18px;
   line-height: 35px;
   color: var(--text2);
 }
-
 .section-quem-somos-container{
   display: flex;
   justify-content: space-between;
@@ -168,12 +177,90 @@ margin-left: 17px;
   bottom: 22px;
   position: absolute;
 }
+
+/* section produtos */
 .section-produtos{
-  background: rgb(229,229,229);
-  background: linear-gradient(170deg, rgba(229,229,229,1) 19%, rgba(254,220,224,1) 19%);
+  position: relative;
+  padding-top: 80px;
   padding-left: 82px;
 }
+.section-produtos::after{
+  border: 2px solid #FA867E;
+  border-radius: 50%;
+  content: "";
+  height: 119px;
+  position: absolute;
+  right:160px;
+  top: 220px;
+  width: 119px;
+}
+.section-produtos::before{
+  border: 2px solid #FA867E;
+  border-radius: 50%;
+  content: "";
+  height: 258px;
+  position: absolute;
+  right:-40px;
+  top: 40px;
+  width: 258px;
+}
 .section-produtos h1{
-  margin-top: 20px;
+  font-size:32px;
+  color: var(--text1);
+  cursor: default;
+  position: relative;
+  z-index: 2;
+}
+.section-produtos h1::after{
+  content: "PRODUTOS";
+  font-size: 80px;
+  font-weight: 700;
+  position: absolute;
+  color: var(--background-title);
+  z-index: 1;
+  left: 22px;
+  bottom: -21px;
+}
+.section-produtos h1::before{
+  content: "";
+  z-index: 1;
+  height: 6px;
+  width: 6px;
+  left: -8px;
+  top: 23px;
+  background-color: var(--color-button);  
+  position: absolute;
+}
+.section-produtos-container{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 125px;
+  margin-bottom: 155px;
+}
+.section-produtos-paragraphs{
+  margin-left: 88px;
+  width: 579px;
+  height: 338px;
+}
+.section-produtos-paragraphs h3{
+  color: var(--text1);
+  font-size: 24px;
+  font-weight: 700;
+}
+.last{
+  margin-top: 32px;
+}
+.section-produtos-paragraphs p{
+  color: var(--text2);
+  font-size: 19px;
+  line-height: 35px;
+  margin-top: 16px;
 }
 
+/* section perguntas frequentes */
+.section-perguntas-frequentes{
+  background-color: var(--background2);
+  padding-left: 82px;
+  padding-top: 133px;
+}
