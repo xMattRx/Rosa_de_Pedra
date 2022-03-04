@@ -2,7 +2,9 @@
 :root{
   --background1: #FEDCE0;
   --background2: #E5E5E5;
+  --background-title: rgba(250, 134, 126, 0.15);
   --text1: #FA867E;
+  --text2: #574E4E;
   --color-button: #F00F10;
 }
 
@@ -18,10 +20,6 @@ body{
 img{
   max-width:100%;
   
-}
-
-.section-1{
-  height: 668px;
 }
 
 /* header */
@@ -105,5 +103,77 @@ margin-left: 17px;
 
 /* section quem somos */
 .section-quem-somos{
-  background-color: var(--background2);
+  background: rgb(229,229,229);
+  background: linear-gradient(166deg, rgba(229,229,229,1) 80%, rgba(254,220,224,1) 80%);
+  padding-top: 133px;
+  padding-left: 75px;
 }
+.section-quem-somos h1{
+  padding-left: 11px;
+  font-size:32px;
+  color: var(--text1);
+  cursor: default;
+  position: relative;
+  z-index: 2;
+}
+.section-quem-somos h1::after{
+  content: "QUEM SOMOS";
+  font-size: 80px;
+  font-weight: 700;
+  position: absolute;
+  color: var(--background-title);
+  z-index: 1;
+  left: 34px;
+  bottom: -21px;
+}
+.section-quem-somos h1::before{
+  content: "";
+  z-index: 1;
+  height: 6px;
+  width: 6px;
+  left: 1px;
+  top: 22px;
+  background-color: var(--color-button);  
+  position: absolute;
+}
+.section-quem-somos-paragraph{
+  margin-top: 67px;
+  height: 420px;
+  width: 677px;
+}
+.section-quem-somos p{
+  font-size: 18px;
+  line-height: 35px;
+  color: var(--text2);
+}
+
+.section-quem-somos-container{
+  display: flex;
+  justify-content: space-between;
+}
+.section-quem-somos-image{
+  position: relative;
+  z-index:0;
+}
+.section-quem-somos-image::before{
+  content: "";
+  display: block;
+  z-index: 1;
+  width: 429px;
+  height:601px;
+  border: 2px solid var(--text1);
+  box-sizing: border-box;
+  border-radius: 30px;
+  right: 31px;
+  bottom: 22px;
+  position: absolute;
+}
+.section-produtos{
+  background: rgb(229,229,229);
+  background: linear-gradient(170deg, rgba(229,229,229,1) 19%, rgba(254,220,224,1) 19%);
+  padding-left: 82px;
+}
+.section-produtos h1{
+  margin-top: 20px;
+}
+
