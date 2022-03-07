@@ -16,22 +16,27 @@
 }
 body{
   background-color:var(--background1);
+  background-image: url('../assets/images/Planta1.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 4%;
   font-family: 'Exo 2', sans-serif;
   overflow-x: hidden;
 }
 img{
   max-width:100%;
 }
-
-/* header */
+header{
+  margin: 0 auto;
+  max-width: 1440px;
+}
 .header-container{
   align-items: center;
   display: flex;
   margin: 0 auto;
   margin-top: 60px;
-  width: calc(100%);
   padding-right: 150px;
   padding-left: 150px;
+  max-width: 1440px;
 }
 .header-container nav ul{
   display: flex; 
@@ -39,9 +44,12 @@ img{
   margin-right: 90px;
 }
 .header-container nav ul li{
-  margin:  0 28px;
   color: var(--text1);
   cursor: pointer;
+  width: max-content;
+}
+.header-container nav ul li:not(nav ul li:first-child){
+  margin-left: 58px;
 }
 .header-container button{
   align-items: center;
@@ -64,13 +72,20 @@ img{
 }
 
 /* section suculentas */
+.suculentas{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+}
 .section-suculentas{
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 148px;
   display: flex;
   margin-bottom: 0;
-  margin-right: auto;
-  margin-left: 146px;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+
 }
 .section-suculentas h1{
   color: var(--text1);
@@ -85,6 +100,9 @@ img{
 .section-suculentas-texts{
   display: flex;
   flex-direction: column;
+  margin-top: 203px;
+  margin-bottom: 255px;
+  
 }
 .section-suculentas-texts p{
 color: var(--color-button);
@@ -96,20 +114,22 @@ margin-top: 20px;
 .section-suculentas-texts p span{
 margin-left: 17px;
 }
-.section-suculentas-img{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-top:65px;
-}
+
+
 
 
 /* section quem somos */
+.quem-somos{
+  background: rgb(229,229,229);
+  
+}
 .section-quem-somos{
   background: rgb(229,229,229);
   padding-top: 133px;
   padding-right: 62px;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 /* triangulo */
 .section-quem-somos::after{
@@ -186,6 +206,8 @@ margin-left: 17px;
   position: relative;
   padding-top: 80px;
   padding-left: 152px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .section-produtos::after{
   border: 2px solid #FA867E;
@@ -262,11 +284,16 @@ margin-left: 17px;
 }
 
 /* section perguntas frequentes */
+.perguntas-frequentes{
+  background-color: var(--background2);
+}
 .section-perguntas-frequentes{
   background-color: var(--background2);
   padding-left: 152px;
   padding-bottom: 100px;
   padding-top: 133px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .section-perguntas-frequentes h1{
   font-size:32px;
@@ -345,6 +372,8 @@ margin-left: 17px;
   padding-right: 203.58px;
   position: relative;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .section-newsletter p{
 color: var(--text2);
@@ -390,9 +419,13 @@ line-height: 45px;
 }
 
 /* section fale-conosco */
-
+.fale-conosco{
+  background-color: var(--background2);
+}
 .section-fale-conosco{
   background-color: var(--background2);
+  max-width: 1440px;
+  margin: 0 auto;
   padding-left: 150px;
   padding-top:135px;
   padding-bottom: 163px;
