@@ -16,7 +16,7 @@ body{
   background-color:var(--background1);
   background-image: url('../assets/images/Planta1.svg');
   background-repeat: no-repeat;
-  background-position: 100% 4%;
+  background-position: 100% 4.2%;
   font-family: 'Exo 2', sans-serif;
   overflow-x: hidden;
 }
@@ -24,7 +24,7 @@ body{
 @media screen and (max-width: 361px){
   body{
     background-size: 304px 250px;
-    background-position: 100% 4%;
+    background-position: 100% 4.2%;
   }
 }
 
@@ -420,9 +420,9 @@ margin-left: 17px;
   .section-produtos-container{
     margin-top: 78px;
   }
-  .section-produtos-container img{
+  /* .section-produtos-container img{
     margin-left: 48px;
-  }
+  } */
   .section-produtos-paragraphs{
     margin-left: 0px;
     width: 307px;
@@ -473,7 +473,6 @@ margin-left: 17px;
 }
 .section-perguntas-frequentes-topic{
   width: 848px;
-  height: 298px;
   border: 2px solid var(--color-button);
   box-sizing: border-box;
   border-radius: 10px;
@@ -498,6 +497,9 @@ margin-left: 17px;
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
+}
+.section-perguntas-frequentes-title img{
+  cursor: pointer;
 }
 .section-perguntas-frequentes-topic:not(.first-topic){
   margin-top:30px;
