@@ -6,8 +6,6 @@
   --text1: #FA867E;
   --text2: #574E4E;
   --color-button: #F00F10;
-  
-  
 }
 
 /* general */
@@ -22,6 +20,15 @@ body{
   font-family: 'Exo 2', sans-serif;
   overflow-x: hidden;
 }
+
+@media screen and (max-width: 361px){
+  body{
+    background-size: 304px 250px;
+    background-position: 100% 5%;
+  }
+}
+
+
 img{
   max-width:100%;
 }
@@ -43,10 +50,24 @@ header{
   margin-left: 157px;
   margin-right: 90px;
 }
-.header-container nav ul li{
+.header-container li{
   color: var(--text1);
   cursor: pointer;
   width: max-content;
+  position: relative;
+}
+.header-container li::before{
+  content:"";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 0px;
+  background-color: var(--color-button);
+  bottom: -6px;
+  transition: 0.3s;
+}
+.header-container li:hover::before{
+  width: 25px;
 }
 .header-container nav ul li:not(nav ul li:first-child){
   margin-left: 58px;
@@ -70,6 +91,26 @@ header{
   margin-top: 6px;
   margin-left: 17px;
 }
+.header-container .menu-responsive{
+  display: none;
+}
+
+@media screen and (max-width: 361px){
+  .header-container{
+    margin-top: 20px;
+    padding-right: 24px;
+    padding-left: 28px;
+  }
+  .header-container nav ul, .header-container button{
+    display: none;
+  }
+  .header-container .menu-responsive{
+    display: block;
+  }
+}
+
+
+
 
 /* section suculentas */
 .section-suculentas{
@@ -114,20 +155,30 @@ margin-top: 20px;
 margin-left: 17px;
 }
 
+@media screen and (max-width: 361px){
+  .section-suculentas-texts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 127px;
+    margin-left: 28px;
+  }
+  .section-suculentas-texts h1{
+    font-size: 32px;
+  }
+}
 
 
 
 /* section quem somos */
 .quem-somos{
   background: rgb(229,229,229);
-
 }
 .section-quem-somos{
   background: rgb(229,229,229);
-  padding-top: 133px;
-  position: relative;
   max-width: 1440px;
   margin: 0 auto;
+  padding-top: 133px;
+  position: relative;
 }
 /* triangulo */
 .section-quem-somos::after{
@@ -182,10 +233,11 @@ margin-left: 17px;
   justify-content: space-between;
 }
 .section-quem-somos-image{
+  margin-right: 51px;
   position: relative;
   z-index:0;
-  margin-right: 51px;
 }
+
 .section-quem-somos-image::before{
   content: "";
   display: block;
@@ -199,6 +251,41 @@ margin-left: 17px;
   bottom: 22px;
   position: absolute;
 }
+@media screen and (max-width: 361px){
+  .section-quem-somos h1{
+    padding-left: 38px;
+    font-size: 28px;
+  }
+  .section-quem-somos h1::after{
+    content: "QUEM SOMOS";
+    font-size: 40px;
+    font-weight: 700;
+    position: absolute;
+    /* color: var(--background-title); */
+    z-index: 1;
+    left: 48px;
+    bottom: -5px;
+  }
+  .section-quem-somos h1::before{
+    content: "";
+    z-index: 1;
+    height: 6px;
+    width: 6px;
+    left: 26px;
+    top: 22px;
+    background-color: var(--color-button);  
+    position: absolute;
+  }
+  .section-quem-somos-paragraph{
+    margin-top: 67px;
+    width: 300px;
+    padding-left:30px;
+    padding-right:30px;
+  }
+}
+
+
+
 
 /* section produtos */
 
@@ -290,6 +377,7 @@ margin-left: 17px;
   margin-top: 16px;
 }
 
+
 /* section perguntas frequentes */
 .perguntas-frequentes{
   background-color: var(--background2);
@@ -332,7 +420,6 @@ margin-left: 17px;
   background-color: var(--color-button);  
   position: absolute;
 }
-
 .section-perguntas-frequentes-topic{
   width: 848px;
   height: 298px;
@@ -345,7 +432,6 @@ margin-left: 17px;
   padding-right: 32.75px;
   padding-bottom: 42px;
 }
-
 .section-perguntas-frequentes-topic h2{
   color: var(--text2);
   font-size: 24px;
@@ -365,6 +451,9 @@ margin-left: 17px;
 .section-perguntas-frequentes-topic:not(.first-topic){
   margin-top:30px;
 }
+
+
+
 
 /* section newsletter */
 .section-newsletter{
@@ -407,7 +496,6 @@ line-height: 45px;
 .section-newsletter button span{
   margin-left:27.56px;
 }
-
 .section-newsletter-input{
   margin-top:105px;
 }
@@ -425,6 +513,8 @@ line-height: 45px;
   color: #231F1F;
   font-size: 18px;
 }
+
+
 
 /* section fale-conosco */
 .fale-conosco{
@@ -527,6 +617,8 @@ line-height: 45px;
   align-items: center;
 }
 
+
+
 footer .container-footer{
   align-items: center;
   flex-direction: column;
@@ -559,4 +651,140 @@ footer .icon-area{
 footer .container-icons .icon-area img{
   height: 35px;
   width: 35px;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1026px) {
+ 
+  .header-container{
+    padding-right: 28px;
+    padding-left: 26px;
+  }
+  .section-suculentas-texts{
+    margin-left: 26px;
+  }
+  .section-quem-somos h1{
+    padding-left: 44px;
+  }
+  .section-quem-somos h1::after{
+    left: 64px;
+  }
+  .section-quem-somos h1::before{
+    left: 35px;
+  }
+  .section-quem-somos-paragraph{
+    padding-left:30px;
+  }
+  .section-quem-somos-image{
+    margin-right: 171px;
+  }
+  .section-produtos h1{
+    margin-left: 44px;
+  }
+  .section-produtos-container{
+    margin-left: 33px;
+  }
+  .section-produtos::before{
+    border: 2px solid #FA867E;
+    border-radius: 50%;
+    content: "";
+    height: 258px;
+    position: absolute;
+    right:80px;
+    top: 40px;
+    width: 258px;
+  }
+  .section-produtos::after{
+    right:280px;
+  }
+  .section-perguntas-frequentes h1{
+    margin-left: 44px;
+  }
+  .section-perguntas-frequentes-topic{
+    margin-left: 32px;
+  }
+  .section-newsletter{
+    padding-left: 32px;
+  }
+  .section-fale-conosco{
+    background-color: var(--background2);
+    padding-right: 120px;
+  }
+  .section-fale-conosco h1{
+    margin-left: 34px; 
+  }
+  .section-fale-conosco form{
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 1025px){
+  .header-container nav ul{
+    margin-left: 20px;
+    margin-right: 9px;
+  }
+  .header-container ul, .header-container li, .header-container button{
+  }
+  .header-container .menu-responsive{
+  }
+  .header-container{
+    justify-content: space-between;
+  }
+  .section-fale-conosco-container img{
+    display: none;
+  }
+  .header-container button{
+   font-size: 10px;
+   margin-left: 10px;
+  }
+
+
+  .section-quem-somos-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .section-quem-somos-image{
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+  }
+  .section-quem-somos-image::before{
+    right: 330px;
+  }
+  .section-produtos-container{
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .section-produtos::before, .section-produtos::after{
+    display: none;
+  }
+  .section-produtos-paragraphs{
+    margin-top: 30px;
+  }
+  .section-perguntas-frequentes-topic{
+    width: 700px;
+  }
+  .section-perguntas-frequentes-topic h2{
+    margin-bottom: 20px;
+  }
+  .section-newsletter{
+
+    padding-left: 152px;
+    padding-right: 13.58px;
+   
+  }
+  .section-newsletter-input input{
+    width: 202px;
+    margin-left: 10px;
+  }
+
+  .section-fale-conosco-container img{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1025px) and (min-width: 362px) {
+  .section-suculentas h1{
+    font-size: 48px;
+  }
 }
