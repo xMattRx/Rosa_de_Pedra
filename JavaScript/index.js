@@ -18,6 +18,20 @@ function handle(number){
   });
 };
 
+function menuOpen(){
+  const element = document.getElementById('menu')
+  element.style.left = "0%"
+  const body = document.getElementsByTagName('body')
+  body[0].style.overflow = "hidden"
+}
+
+function menuClose(){
+  const element = document.getElementById('menu')
+  element.style.left = "100%"
+  const body = document.getElementsByTagName('body')
+  body[0].style.overflow = "auto"
+}
+
 function initial(number){
   document.querySelectorAll("img").forEach(function(img) {
     const id = img.id;

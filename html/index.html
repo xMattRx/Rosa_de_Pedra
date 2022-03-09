@@ -33,12 +33,31 @@
         </ul>
       </nav>
       <button>Fale conosco <span><img src="../assets/images/Arrow.svg" alt=""></span></button>
-      <nav class="menu-responsive">
+      <div onclick="menuOpen()" class="menu-responsive-icon">
         <img src="../assets/images/menu_responsive.svg" alt="">
-      </nav>
+      </div>
     </div>
   </header>
+  <nav id="menu" class="menu-responsive">
+    <div class="container-responsive-menu">
+      
+      <div onclick="menuClose()" class="icon-close">
+        <img src="../assets/images/close.svg" alt="">
+      </div>
 
+      <nav>
+        <ul>
+          <li>Início</li>
+          <li>Quem Somos</li>
+          <li>Produtos</li>
+          <li>Perguntas Frequentes</li>
+          <li>Fale Conosco</li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </nav>
   <section class="suculentas">
     <div class="section-suculentas">
       <div class="section-suculentas-texts">
@@ -47,7 +66,7 @@
       </div>
     </div>
   </section>
-   
+
   <section class="quem-somos">
     <div class="section-quem-somos">
       <h1>Quem Somos</h1>
@@ -101,7 +120,8 @@
     <div class="section-perguntas-frequentes">
       <h1>Perguntas Frequentes</h1>
 
-      <div id="topic1" class="section-perguntas-frequentes-topic first-topic"> <!--1-->
+      <div id="topic1" class="section-perguntas-frequentes-topic first-topic">
+        <!--1-->
         <div class="section-perguntas-frequentes-title">
           <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h2>
           <img onclick="handle(1)" id="1" src="../assets/images/Arrow2.svg" alt="">
@@ -111,7 +131,8 @@
           tellus porttitor justo, bibendum feugiat erat lorem in lacus. Etiam finibus pellentesque faucibus. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit. Vestibulum sodales, diam non varius aliquam</p>
       </div>
-      <div id="topic2" class="section-perguntas-frequentes-topic"> <!--2-->
+      <div id="topic2" class="section-perguntas-frequentes-topic">
+        <!--2-->
         <div class="section-perguntas-frequentes-title">
           <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h2>
           <img onclick="handle(2)" id="2" src="../assets/images/Arrow2.svg" alt="">
@@ -120,7 +141,8 @@
           tellus porttitor justo, bibendum feugiat erat lorem in lacus. Etiam finibus pellentesque faucibus. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit. Vestibulum sodales, diam non varius aliquam</p>
       </div>
-      <div id="topic3" class="section-perguntas-frequentes-topic"> <!--3-->
+      <div id="topic3" class="section-perguntas-frequentes-topic">
+        <!--3-->
         <div class="section-perguntas-frequentes-title">
           <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h2>
           <img onclick="handle(3)" id="3" src="../assets/images/Arrow2.svg" alt="">
@@ -130,7 +152,8 @@
           tellus porttitor justo, bibendum feugiat erat lorem in lacus. Etiam finibus pellentesque faucibus. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit. Vestibulum sodales, diam non varius aliquam</p>
       </div>
-      <div id="topic4" class="section-perguntas-frequentes-topic"> <!--4-->
+      <div id="topic4" class="section-perguntas-frequentes-topic">
+        <!--4-->
         <div class="section-perguntas-frequentes-title">
           <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h2>
           <img onclick="handle(4)" id="4" src="../assets/images/Arrow2.svg" alt="">
@@ -194,7 +217,8 @@
     </div>
   </footer>
 
- 
+
+
   <script src="../JavaScript/index.js"></script>
 </body>
 
