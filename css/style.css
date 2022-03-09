@@ -16,7 +16,7 @@ body{
   background-color:var(--background1);
   background-image: url('../assets/images/Planta1.svg');
   background-repeat: no-repeat;
-  background-position: 100% 4.2%;
+  background-position: 100% 4.6%;
   font-family: 'Exo 2', sans-serif;
   overflow-x: hidden;
 }
@@ -24,7 +24,7 @@ body{
 @media screen and (max-width: 361px){
   body{
     background-size: 304px 250px;
-    background-position: 100% 4.2%;
+    background-position: 100% 5%;
   }
 }
 
@@ -487,9 +487,9 @@ margin-left: 17px;
   color: var(--text2);
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 47px;
 }
 .section-perguntas-frequentes-topic p {
+  margin-top: 47px;
   color: var(--text2);
   line-height: 35px;
   font-size: 18px;
@@ -936,17 +936,13 @@ footer .container-icons .icon-area img{
   .section-produtos-paragraphs{
     margin-top: 30px;
   }
-  
-  .section-perguntas-frequentes-topic h2{
-    margin-bottom: 20px;
+  .section-perguntas-frequentes-topic p{
+    margin-top: 20px;
   }
-  
- 
 
   .section-fale-conosco-container img{
     display: none;
   }
-
 }
 
 @media screen and (max-width: 1025px) and (min-width: 362px) {
