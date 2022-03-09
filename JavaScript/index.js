@@ -3,15 +3,19 @@ function handle(number){
     const id = img.id;
     if(id == number){
       const rotate = img.style.transform
+      const topic = "topic" + number
+      const element = document.getElementById(topic);
       if(rotate === ""){
         img.style.transform = "rotate(180deg)"
-        console.log(img)
+        element.children[1].style.display = "none"
+        element.style.height = "93px"
+        
+          
       }else{
         img.style.transform = ""
-        console.log(img)
+        element.children[1].style.display = "block"
+        element.style.height = "max-content"
       }
-
-      
     }
   });
 };
