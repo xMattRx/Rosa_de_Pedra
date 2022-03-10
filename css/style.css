@@ -242,7 +242,7 @@ margin-left: 17px;
   z-index: 2;
 }
 .section-quem-somos h1::after{
-  content: "QUEM SOMOS";
+  content: attr(data-title);
   font-size: 80px;
   font-weight: 700;
   position: absolute;
